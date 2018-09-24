@@ -60,7 +60,8 @@ public class ObjCtrl : MonoBehaviour {
   }
 
   public void ResetOnClick(){
-    obj.transform.Rotate(0, 0, 0);
+    obj.transform.rotation = Quaternion.identity;
+    obj.transform.localScale = initScale;
     Debug.Log("Pushed!");
   }
 }

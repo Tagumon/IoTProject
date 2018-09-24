@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTProject", "Assembly-CSharp.csproj", "{C582E852-DEA8-26ED-613B-46D25533DC2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTProject", "Assembly-CSharp-Editor.csproj", "{B6C9845E-5BCF-CBB9-7DB9-BE89F28B33C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{C582E852-DEA8-26ED-613B-46D25533DC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C582E852-DEA8-26ED-613B-46D25533DC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C582E852-DEA8-26ED-613B-46D25533DC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C9845E-5BCF-CBB9-7DB9-BE89F28B33C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C9845E-5BCF-CBB9-7DB9-BE89F28B33C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C9845E-5BCF-CBB9-7DB9-BE89F28B33C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C9845E-5BCF-CBB9-7DB9-BE89F28B33C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
