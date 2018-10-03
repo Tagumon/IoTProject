@@ -93,9 +93,14 @@
      <Compile Include="Assets\NCMB\Script\Task\NCMBScriptTaskExtension.cs" />
      <Compile Include="Assets\NCMB\Script\Task\NCMBUserTaskExtension.cs" />
      <Compile Include="Assets\NCMB\Script\Task\NCMBUserTaskMethods.cs" />
+     <Compile Include="Assets\Scripts\BoadScript.cs" />
+     <Compile Include="Assets\Scripts\MemberClickedScript.cs" />
+     <Compile Include="Assets\Scripts\MemberDataManager.cs" />
      <Compile Include="Assets\Scripts\ObjCtrl.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\PushMicrobotPushScript.cs" />
      <Compile Include="Assets\Scripts\ResetButtonScript.cs" />
+     <Compile Include="Assets\Scripts\SlackAPI.cs" />
      <Compile Include="Assets\Scripts\VariableManager.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/Unity Project/IoTProject/IoTProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
