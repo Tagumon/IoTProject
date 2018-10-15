@@ -14,12 +14,15 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 	float time = 0f;
 
 	public Button CloseButton;
+	public Button EditButton;
+	public GameObject ProfileEdit;
 	private NCMBObject obj;
 
 
 	// Use this for initialization
 	void Start () {
-		CloseButton.onClick.AddListener(CloseOnClick);		
+		CloseButton.onClick.AddListener(CloseOnClick);	
+		EditButton.onClick.AddListener(EditOnClick);	
 	}
 	
 	// Update is called once per frame
@@ -64,6 +67,10 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 		Boad.SetActive(true);
 		Debug.Log(gameObject.name + " がクリックされた!");
 	}
+
+	public void EditOnClick(){
+		ProfileEdit.SetActive(true);
+	} 
 	public void CloseOnClick(){
 		//Name.text = "";
 		//Grade.text = "";

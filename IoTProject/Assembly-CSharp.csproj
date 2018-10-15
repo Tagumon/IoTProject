@@ -98,6 +98,9 @@
      <Compile Include="Assets\Scripts\MemberDataManager.cs" />
      <Compile Include="Assets\Scripts\ObjCtrl.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\ProfileCloseScript.cs" />
+     <Compile Include="Assets\Scripts\ProfileEditScript.cs" />
+     <Compile Include="Assets\Scripts\ProfileSaveScript.cs" />
      <Compile Include="Assets\Scripts\PushMicrobotPushScript.cs" />
      <Compile Include="Assets\Scripts\ResetButtonScript.cs" />
      <Compile Include="Assets\Scripts\SlackAPI.cs" />
