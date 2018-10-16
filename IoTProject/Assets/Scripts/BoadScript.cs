@@ -6,23 +6,21 @@ using UnityEngine.UI;
 using NCMB;
 
 public class BoadScript : MonoBehaviour, IPointerClickHandler {
-	public GameObject Boad;
-	//public Text Name;
-	//public Text Grade;
+	public GameObject Board;
+	//public Text BoardTime;
+	public Text BoardText;
+	public GameObject InputText;
+	public InputField SendText;
 	public Text Console;
 	float lifeTime = 1f;
 	float time = 0f;
-
 	public Button CloseButton;
-	public Button EditButton;
-	public GameObject ProfileEdit;
 	private NCMBObject obj;
 
 
 	// Use this for initialization
 	void Start () {
 		CloseButton.onClick.AddListener(CloseOnClick);	
-		EditButton.onClick.AddListener(EditOnClick);	
 	}
 	
 	// Update is called once per frame
@@ -37,10 +35,20 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 	}
 
 	public void OnPointerClick(PointerEventData pointerData){
-		/*NCMBQuery<NCMBObject> _query;
-		_query = new NCMBQuery<NCMBObject>("MemberData");
-		//_query.WhereEqualTo("Type", "Humid");
+		BoardDataUpdate();
+		Board.SetActive(true);
+		Debug.Log(gameObject.name + " がクリックされた!");
+	}
+
+	
+	void BoardDataUpdate(){
+		BoardText.text = "";
+		NCMBQuery<NCMBObject> _query;
+		_query = new NCMBQuery<NCMBObject>("LabBoard");
+		_query.OrderByDescending("createDate");
+		//_query.Limit = 10;
 		_query.FindAsync ((List<NCMBObject> objList, NCMBException e) =>{
+			Debug.Log("SerchOK");
 			if(e != null){
 				//エラー処理
 				Console.text = "Error!";
@@ -48,32 +56,43 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 				//成功処理
 				Console.text = "Succeed!";
 				foreach(NCMBObject v in objList){
-					string MNumber;
-					string MName;
-					string MGrade;
-					MNumber = v["MemberNumber"].ToString();
-					MName = v["Name"].ToString();
-					MGrade = v["Grade"].ToString();
-					if(MNumber == MemberNumber){
-						Name.text = MName;
-						Grade.text = MGrade;
-					}
-					//Debug.Log("Type : " + v["Type"]);
-					//Debug.Log("Value : " + v["Variable"]);
+					//BoardTime.text += v["updateDate"] + "\n";
+					BoardText.text += (v.CreateDate.ToString() + ":  "); 
+					Debug.Log("DateOK");
+					BoardText.text += v["Text"].ToString() + "\n";
+					Debug.Log("TextOK");
 				}
 			}
-		});*/
+		});
 
-		Boad.SetActive(true);
-		Debug.Log(gameObject.name + " がクリックされた!");
 	}
-
-	public void EditOnClick(){
-		ProfileEdit.SetActive(true);
-	} 
+	public void SendTextData(){
+		NCMBObject obj = new NCMBObject ("LabBoard");
+			obj.Add ("Text", SendText.text);
+			obj.SaveAsync ((NCMBException e) => {      
+    		if (e != null) {
+        		//エラー処理
+				Console.text = "Error!";
+			}else{
+				//成功処理
+				Console.text = "Succeed!";
+   			}                   
+		});
+		BoardText.text = "";
+		SendText.text = "";
+		Invoke("BoardDataUpdate", 1f);
+	}
 	public void CloseOnClick(){
-		//Name.text = "";
-		//Grade.text = "";
-		Boad.SetActive(false);	
+		BoardText.text = "";
+		//BoardTime.text = "";
+		SendText.text = "";
+		InputText.SetActive(false);
+		Board.SetActive(false);	
+	}
+	public void InputFieldOpen(){
+		InputText.SetActive(true);
+	}
+	public void InputFieldClose(){
+		InputText.SetActive(false);
 	}
 }

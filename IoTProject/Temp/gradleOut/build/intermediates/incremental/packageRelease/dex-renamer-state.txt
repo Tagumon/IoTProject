@@ -1,4 +1,0 @@
-#Tue Oct 16 02:07:02 JST 2018
-base.0=D\:\\Unity Project\\IoTProject\\IoTProject\\Temp\\gradleOut\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=D\:\\Unity Project\\IoTProject\\IoTProject\\Temp\\gradleOut\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

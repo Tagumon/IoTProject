@@ -157,4 +157,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 e7c88b3fc60e224f1af5316eb9d76f02 Assembly-CSharp.dll:.ProfileSaveScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerScript
 33be3fee11b113e3df70083da3b61dff Assembly-CSharp.dll:.PushMicrobotPushScript
-79bee4bce88306a870c1bea2a00e54b3 Assembly-CSharp.dll:.BoadScript
+f9e1f292b855c29ab4dd150d7d65bcec Assembly-CSharp.dll:.BoadScript
