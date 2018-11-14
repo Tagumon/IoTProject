@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ObjCtrl : MonoBehaviour {
   public GameObject obj;
   public Button reset;
+  public bool RotateControl;
  
   //回転用
   Vector2 sPos;   //タッチした座標
@@ -19,6 +20,7 @@ public class ObjCtrl : MonoBehaviour {
   float v = 1.0f; //現在倍率
  
   void Start() {
+    RotateControl = true;
     wid = Screen.width;
     hei = Screen.height;
     diag = Mathf.Sqrt(Mathf.Pow(wid,2) + Mathf.Pow(hei,2));
@@ -29,6 +31,7 @@ public class ObjCtrl : MonoBehaviour {
   }
  
   void Update () {
+    if(RotateControl){
     if (Input.touchCount == 1){
       //回転
       Touch t1 = Input.GetTouch (0);
@@ -57,6 +60,7 @@ public class ObjCtrl : MonoBehaviour {
         obj.transform.localScale = initScale * v;
       }
     }
+  }
   }
 
   public void ResetOnClick(){

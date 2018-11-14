@@ -96,7 +96,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 c11647d98a929c32d7a87909bc499f3f Assembly-CSharp.dll:.ProfileEditScript
-f5419f6c2485fcffc2319854632b1e40 Assembly-CSharp.dll:.ObjCtrl
+733288c6294802169b6e03aac04539c4 Assembly-CSharp.dll:.ObjCtrl
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -113,6 +113,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 b34ab870a9bd0ecb8e5a194ee4b5a2ea Assembly-CSharp.dll:.MemberDataManager
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AspectSettingScript
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -157,4 +158,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 e7c88b3fc60e224f1af5316eb9d76f02 Assembly-CSharp.dll:.ProfileSaveScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerScript
 33be3fee11b113e3df70083da3b61dff Assembly-CSharp.dll:.PushMicrobotPushScript
-f9e1f292b855c29ab4dd150d7d65bcec Assembly-CSharp.dll:.BoadScript
+9831a347b304dce4479620d30038e5b2 Assembly-CSharp.dll:.BoadScript

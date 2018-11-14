@@ -93,6 +93,7 @@
      <Compile Include="Assets\NCMB\Script\Task\NCMBScriptTaskExtension.cs" />
      <Compile Include="Assets\NCMB\Script\Task\NCMBUserTaskExtension.cs" />
      <Compile Include="Assets\NCMB\Script\Task\NCMBUserTaskMethods.cs" />
+     <Compile Include="Assets\Scripts\AspectSettingScript.cs" />
      <Compile Include="Assets\Scripts\BoadScript.cs" />
      <Compile Include="Assets\Scripts\MemberClickedScript.cs" />
      <Compile Include="Assets\Scripts\MemberDataManager.cs" />

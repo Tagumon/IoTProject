@@ -39,7 +39,7 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 		//Debug.Log("OK");
 		Transform PB;
 		Transform VPort;
-		Transform CT;
+		//Transform CT;
 		Transform IF;
 		foreach (Transform child in canvas.transform){
 			if(child.name == "ProfileBoad"){
@@ -47,12 +47,12 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 				foreach(Transform PBchild in PB.transform){
 					if(PBchild.name == "Viewport"){
 						VPort = PBchild;
-						foreach(Transform VPchild in VPort.transform){
+						/* foreach(Transform VPchild in VPort.transform){
 							if(VPchild.name == "Content"){
-								CT = VPchild;
-								foreach(Transform CTchild in CT.transform){
-									if(CTchild.name == "InputField"){
-										IF = CTchild;
+								CT = VPchild;*/
+								foreach(Transform VPchild in VPort.transform){
+									if(VPchild.name == "InputField"){
+										IF = VPchild;
 										foreach(Transform IFchild in IF.transform){
 											if(IFchild.name == "EditOK"){
 												script = IFchild.gameObject.GetComponent<ProfileSaveScript>();
@@ -60,8 +60,8 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 										}
 									}
 								}
-							}
-						}
+							//}
+						//}
 					}
 				}
 			}
