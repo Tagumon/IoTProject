@@ -14,6 +14,35 @@ public class VariableManager : MonoBehaviour {
 
 	private NCMBObject obj;
 	// Use this for initialization
+
+
+	/*void Awake(){
+		NCMBQuery<NCMBObject> _query;
+		_query = new NCMBQuery<NCMBObject>("VariableData");
+		//_query.WhereEqualTo("Type", "Humid");
+		_query.FindAsync ((List<NCMBObject> objList, NCMBException e) =>{
+			if(e != null){
+				//エラー処理
+				Console.text = "Error!";
+			}else{
+				//成功処理
+				Console.text = "DataUpDated!";
+				foreach(NCMBObject v in objList){
+					string DataType;
+					string Data;
+					DataType = v["Type"].ToString();
+					Data = v["Variable"].ToString();
+					if(DataType == "Temparature"){
+						Temp.text = Data + "℃";
+					}else if(DataType == "Humid"){
+						Humid.text = Data + "%";
+					}
+					//Debug.Log("Type : " + v["Type"]);
+					//Debug.Log("Value : " + v["Variable"]);
+				}
+			}
+		});
+	}*/
 	public void UpdateOnClick () {
 		NCMBQuery<NCMBObject> _query;
 		_query = new NCMBQuery<NCMBObject>("VariableData");
@@ -44,6 +73,32 @@ public class VariableManager : MonoBehaviour {
 	
 	void Start (){
 	UpdateButton.onClick.AddListener(UpdateOnClick);
+	
+	NCMBQuery<NCMBObject> _query;
+		_query = new NCMBQuery<NCMBObject>("VariableData");
+		//_query.WhereEqualTo("Type", "Humid");
+		_query.FindAsync ((List<NCMBObject> objList, NCMBException e) =>{
+			if(e != null){
+				//エラー処理
+				Console.text = "Error!";
+			}else{
+				//成功処理
+				Console.text = "DataUpDated!";
+				foreach(NCMBObject v in objList){
+					string DataType;
+					string Data;
+					DataType = v["Type"].ToString();
+					Data = v["Variable"].ToString();
+					if(DataType == "Temparature"){
+						Temp.text = Data + "℃";
+					}else if(DataType == "Humid"){
+						Humid.text = Data + "%";
+					}
+					//Debug.Log("Type : " + v["Type"]);
+					//Debug.Log("Value : " + v["Variable"]);
+				}
+			}
+		});
 	}
 	// Update is called once per frame
 	void Update () {
