@@ -32,35 +32,35 @@ public class ObjCtrl : MonoBehaviour {
  
   void Update () {
     if(RotateControl){
-    if (Input.touchCount == 1){
-      //回転
-      Touch t1 = Input.GetTouch (0);
-      if (t1.phase == TouchPhase.Began){
-        sPos = t1.position;
-        sRot = obj.transform.rotation;
-      }else if(t1.phase == TouchPhase.Moved||t1.phase == TouchPhase.Stationary){
-        tx = (t1.position.x - sPos.x)/wid; //横移動量(-1<tx<1)
-        ty = (t1.position.y - sPos.y)/hei; //縦移動量(-1<ty<1)
-        obj.transform.rotation = sRot;
-        obj.transform.Rotate(new Vector3(90*ty, -90*tx, 0),Space.World);
-      }
-    } else if (Input.touchCount >= 2) {
-      //ピンチイン ピンチアウト
-      Touch t1 = Input.GetTouch (0);
-      Touch t2 = Input.GetTouch (1);
-      if (t2.phase == TouchPhase.Began) {
-        sDist = Vector2.Distance (t1.position, t2.position);
-      } else if ((t1.phase == TouchPhase.Moved||t1.phase == TouchPhase.Stationary) &&
+      if (Input.touchCount == 1){
+        //回転
+       Touch t1 = Input.GetTouch (0);
+       if (t1.phase == TouchPhase.Began){
+          sPos = t1.position;
+          sRot = obj.transform.rotation;
+        }else if(t1.phase == TouchPhase.Moved||t1.phase == TouchPhase.Stationary){
+          tx = (t1.position.x - sPos.x)/wid; //横移動量(-1<tx<1)
+          ty = (t1.position.y - sPos.y)/hei; //縦移動量(-1<ty<1)
+          obj.transform.rotation = sRot;
+          obj.transform.Rotate(new Vector3(90*ty, -90*tx, 0),Space.World);
+        }
+      } else if (Input.touchCount >= 2) {
+        //ピンチイン ピンチアウト
+        Touch t1 = Input.GetTouch (0);
+        Touch t2 = Input.GetTouch (1);
+        if (t2.phase == TouchPhase.Began) {
+          sDist = Vector2.Distance (t1.position, t2.position);
+        } else if ((t1.phase == TouchPhase.Moved||t1.phase == TouchPhase.Stationary) &&
                  (t2.phase == TouchPhase.Moved||t2.phase == TouchPhase.Stationary) ) {
         nDist = Vector2.Distance (t1.position, t2.position);
         v = v + (nDist - sDist) / diag;
         sDist = nDist;
         if(v > vMax) v = vMax;
         if(v < vMin) v = vMin;
-        obj.transform.localScale = initScale * v;
+         obj.transform.localScale = initScale * v;
+        }
       }
     }
-  }
   }
 
   public void ResetOnClick(){

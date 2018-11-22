@@ -22,7 +22,7 @@ public class PushMicrobotPushScript : MonoBehaviour {
 		data.text = message;
 		var routine = SlackAPI.PostMessage(data);
 		StartCoroutine(routine);
-		Console.text = "Succeed!";
+		Console.text = "PushSucceed!";
 
 	}
 	
@@ -32,12 +32,12 @@ public class PushMicrobotPushScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Console.text == "Succeed!" || Console.text == "Error!"){
+		/*/if(Console.text == "Succeed!" || Console.text == "Error!"){
 			time += Time.deltaTime;
 			if(time > lifeTime){
 				Console.text = "";
 				time = 0f;
 			}
-		}
+		}*/
 	}
 }

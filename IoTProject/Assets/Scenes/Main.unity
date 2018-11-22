@@ -376,6 +376,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -472,6 +477,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -653,6 +663,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -753,6 +768,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -849,6 +869,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -1503,6 +1528,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -1870,6 +1900,7 @@ MonoBehaviour:
     type: 2}
   SpaceObject: {fileID: 1021486402622270, guid: d053f62652ce3c244b9b89cd675fa820,
     type: 2}
+  ObjectControl: {fileID: 879820253}
   Viewport: {fileID: 860199744}
   InputText: {fileID: 2059065879}
   SendText: {fileID: 2059065881}
@@ -2027,6 +2058,7 @@ MonoBehaviour:
   Information: {fileID: 381437637}
   ProfileInput: {fileID: 1883126377}
   EditInput: {fileID: 1883126378}
+  ObjectControl: {fileID: 879820253}
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,6 +3111,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -4020,6 +4057,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -4727,6 +4769,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -6993,6 +7040,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -8599,6 +8651,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -9098,6 +9155,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0
@@ -10383,7 +10445,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -125, y: -200}
-  m_SizeDelta: {x: 200, y: 60}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837215370
 MonoBehaviour:
@@ -10702,7 +10764,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 70}
-  m_SizeDelta: {x: 300, y: 70}
+  m_SizeDelta: {x: 900, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849246814
 MonoBehaviour:
@@ -10836,6 +10898,11 @@ Prefab:
       propertyPath: EditInput
       value: 
       objectReference: {fileID: 1883126378}
+    - target: {fileID: 114219515793572342, guid: 4c11441f506b787439ce2084576b52db,
+        type: 2}
+      propertyPath: ObjectControl
+      value: 
+      objectReference: {fileID: 879820253}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c11441f506b787439ce2084576b52db, type: 2}
   m_IsPrefabParent: 0

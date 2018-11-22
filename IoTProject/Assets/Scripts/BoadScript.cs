@@ -14,6 +14,7 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 	public GameObject TimeTextObject;
 	public GameObject ContentTextObject;
 	public GameObject SpaceObject;
+	public GameObject ObjectControl;
 	Text TimeText;
 	Text ContentText;
 	public GameObject Viewport;
@@ -24,23 +25,17 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 	float time = 0f;
 	public Button CloseButton;
 	private NCMBObject obj;
-	ObjCtrl script;
+	ObjCtrl ObjCtrlscript;
 
 
 	// Use this for initialization
 	void Start () {
 		CloseButton.onClick.AddListener(CloseOnClick);	
+		ObjCtrlscript = ObjectControl.GetComponent<ObjCtrl>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Console.text == "Succeed!" || Console.text == "Error!"){
-			time += Time.deltaTime;
-			if(time > lifeTime){
-				Console.text = "";
-				time = 0f;
-			}
-		}
 	}
 
 	public void OnPointerClick(PointerEventData pointerData){
@@ -48,6 +43,7 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 		Board.SetActive(true);
 		CloseBt.SetActive(true);
 		EditBt.SetActive(true);
+		ObjCtrlscript.RotateControl = false;
 		Debug.Log(gameObject.name + " がクリックされた!");
 	}
 
@@ -64,29 +60,40 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 				Console.text = "Error!";
 			}else{
 				//成功処理
-				Console.text = "Succeed!";
+				Console.text = "ReceptionSucceed!";
 				foreach(NCMBObject v in objList){
 					//BoardTime.text += v["updateDate"] + "\n";
 					GameObject TimeTextPrefab = (GameObject)Instantiate(TimeTextObject);
 					TimeTextPrefab.transform.SetParent(Viewport.transform);
 					TimeText = TimeTextPrefab.GetComponent<Text>();
+					Console.text = "TimeSet!";
 					GameObject ContentTextPrefab = (GameObject)Instantiate(ContentTextObject);
 					ContentTextPrefab.transform.SetParent(Viewport.transform);
 					ContentText = ContentTextPrefab.GetComponent<Text>();
+					Console.text = "TextSet!";
 					GameObject SpacePrefab = (GameObject)Instantiate(SpaceObject);
 					SpacePrefab.transform.SetParent(Viewport.transform);
-					string CD = v.CreateDate.ToString();
-					DateTime dt = System.DateTime.ParseExact(CD, "M/d/yyyy h:mm:ss tt", System.Globalization.DateTimeFormatInfo.InvariantInfo, System.Globalization.DateTimeStyles.None);
+					Console.text = "SpaceSet!";
+					String CD = v.CreateDate.ToString();
+					Debug.Log(CD);
+					Console.text = "TimeReception!";
+					//DateTime dt = DateTime.ParseExact(CD, "M/d/yyyy h:mm:ss tt", null /* System.Globalization.DateTimeFormatInfo.InvariantInfo, System.Globalization.DateTimeStyles.None*/);
+					DateTime dt = DateTime.Parse(CD);
+					Console.text = "TimeChange!";
 					dt = dt.AddHours(9);
+					Console.text = "ChangeJapanTime!";
 					TimeText.text += ("  " + dt.ToString() + ": "); 
 					TimeText.rectTransform.sizeDelta = new Vector2(TimeText.preferredWidth, TimeText.preferredHeight);
 					TimeText.rectTransform.sizeDelta = new Vector2(TimeText.preferredWidth, TimeText.preferredHeight);
 					//Debug.Log(dt);
+					Console.text = "TimeCompleted!";
 					ContentText.text += ("  " + v["Text"].ToString());
 					ContentText.rectTransform.sizeDelta = new Vector2(ContentText.preferredWidth, ContentText.preferredHeight);
 					ContentText.rectTransform.sizeDelta = new Vector2(ContentText.preferredWidth, ContentText.preferredHeight);
 					//Debug.Log("TextOK");
+					Console.text = "TextCompleted!";
 				}
+				Console.text = "WriteSucceed!";
 			}
 		});
 
@@ -100,7 +107,7 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 				Console.text = "Error!";
 			}else{
 				//成功処理
-				Console.text = "Succeed!";
+				Console.text = "SendSucceed!";
    			}                   
 		});
 		/* TimeText.text = "";
@@ -125,6 +132,7 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 		Board.SetActive(false);	
 		CloseBt.SetActive(false);
 		EditBt.SetActive(false);
+		ObjCtrlscript.RotateControl = true;
 	}
 	public void InputFieldOpen(){
 		InputText.SetActive(true);

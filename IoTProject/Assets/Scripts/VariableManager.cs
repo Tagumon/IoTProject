@@ -24,7 +24,7 @@ public class VariableManager : MonoBehaviour {
 				Console.text = "Error!";
 			}else{
 				//成功処理
-				Console.text = "Succeed!";
+				Console.text = "DataUpDated!";
 				foreach(NCMBObject v in objList){
 					string DataType;
 					string Data;
@@ -47,12 +47,12 @@ public class VariableManager : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if(Console.text == "Succeed!" || Console.text == "Error!"){
+		/*if(Console.text == "Succeed!" || Console.text == "Error!"){
 			time += Time.deltaTime;
 			if(time > lifeTime){
 				Console.text = "";
 				time = 0f;
 			}
-		}
+		}*/
 	}
 }

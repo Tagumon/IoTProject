@@ -23,13 +23,7 @@ public class ProfileSaveScript : MonoBehaviour {
 	}
 
 	void Update () {
-		if(Console.text == "Succeed!" || Console.text == "Error!"){
-			time += Time.deltaTime;
-			if(time > lifeTime){
-				Console.text = "";
-				time = 0f;
-			}
-		}
+	
 	}
 	
 
@@ -46,7 +40,7 @@ public class ProfileSaveScript : MonoBehaviour {
 				Debug.Log("ERROR");
 			}else{
 				//成功処理
-				Console.text = "Succeed!";
+				Console.text = "SaveSucceed!";
 				Debug.Log("SUCCEED");
 				Debug.Log(ProfileMemberNumber);
 				Debug.Log("NumberOK");

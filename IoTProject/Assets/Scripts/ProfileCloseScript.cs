@@ -11,6 +11,11 @@ public class ProfileCloseScript : MonoBehaviour {
 	public GameObject Information;
 	public GameObject ProfileInput;
 	public InputField EditInput;
+	public GameObject ObjectControl;
+	ObjCtrl ObjCtrlScript;
+	void Start(){
+		ObjCtrlScript = ObjectControl.GetComponent<ObjCtrl>();
+	}
 
 	public void CloseOnClick(){
 		Name.text = "";
@@ -18,5 +23,6 @@ public class ProfileCloseScript : MonoBehaviour {
 		Profile.text = "";
 		ProfileInput.SetActive(false);
 		Information.SetActive(false);	
+		ObjCtrlScript.RotateControl = true;
 	}
 }

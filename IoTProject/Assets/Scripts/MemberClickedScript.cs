@@ -8,6 +8,7 @@ using NCMB;
 public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 	public int MemberNumber;
 	public GameObject Information;
+	public GameObject ObjectControl;
 	public Text Name;
 	public Text Grade;
 	public Text Profile;
@@ -17,22 +18,18 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 	public Canvas canvas;
 	public Button CloseButton;
 	ProfileSaveScript script;
+	ObjCtrl ObjCtrlscript;
 	public InputField EditInput;
 
 	// Use this for initialization
 	void Start () {
+		ObjCtrlscript = ObjectControl.GetComponent<ObjCtrl>();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Console.text == "Succeed!" || Console.text == "Error!"){
-			time += Time.deltaTime;
-			if(time > lifeTime){
-				Console.text = "";
-				time = 0f;
-			}
-		}
+	
 	}
 
 	public void OnPointerClick(PointerEventData pointerData){
@@ -77,7 +74,7 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 				Console.text = "Error!";
 			}else{
 				//成功処理
-				Console.text = "Succeed!";
+				Console.text = "ReceptionSucceed!";
 				foreach(NCMBObject v in objList){
 					string MNumber;
 					string MName;
@@ -96,9 +93,11 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 					//Debug.Log("Type : " + v["Type"]);
 					//Debug.Log("Value : " + v["Variable"]);
 				}
+				Console.text = "WriteSucced!";
 			}
 		});
 		Information.SetActive(true);
+		ObjCtrlscript.RotateControl = false;
 		Debug.Log(gameObject.name + " がクリックされた!");
 	}
 }

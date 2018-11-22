@@ -3,7 +3,16 @@ guid: 6d5a53a7fbc667741851d395c6a815c5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Information: {instanceID: 0}
+  - ObjectControl: {instanceID: 0}
+  - Name: {instanceID: 0}
+  - Grade: {instanceID: 0}
+  - Profile: {instanceID: 0}
+  - Console: {instanceID: 0}
+  - canvas: {instanceID: 0}
+  - CloseButton: {instanceID: 0}
+  - EditInput: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
