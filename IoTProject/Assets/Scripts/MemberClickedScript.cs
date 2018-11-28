@@ -97,6 +97,17 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 			}
 		});
 		Information.SetActive(true);
+
+    	if ((float)Screen.height / (float)Screen.width >= 2) {
+			// 2:1
+			Debug.Log((float)Screen.height / (float)Screen.width);
+			Information.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 2000);
+		} else {
+			// 16:9
+			Debug.Log((float)Screen.height / (float)Screen.width);
+			Information.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 1800);
+		}
+		
 		ObjCtrlscript.RotateControl = false;
 		Debug.Log(gameObject.name + " がクリックされた!");
 	}

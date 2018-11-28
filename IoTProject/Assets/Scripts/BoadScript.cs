@@ -49,6 +49,21 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 
 	
 	void BoardDataUpdate(){
+		//if (SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "Tutorial") {
+    		if ((float)Screen.height / (float)Screen.width >= 2) {
+				// 2:1
+				Debug.Log((float)Screen.height / (float)Screen.width);
+				Board.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 2000);
+				//GameObject.Find("UI").GetComponent<RectTransform>().offsetMin = new Vector2 (0, 90);
+				//GameObject.Find("UI").GetComponent<RectTransform>().offsetMax = new Vector2 (0, -120);
+			} else {
+				// 16:9
+				Debug.Log((float)Screen.height / (float)Screen.width);
+				Board.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 1800);
+				//Board.GetComponent<RectTransform>().offsetMax = new Vector2 (450, 200);
+			}
+		//}
+
 		NCMBQuery<NCMBObject> _query;
 		_query = new NCMBQuery<NCMBObject>("LabBoard");
 		_query.OrderByDescending("createDate");
