@@ -9,12 +9,11 @@ using System.Threading;
 
 public class PushMicrobotPushScript : MonoBehaviour {
 	public Text Console;
-	float lifeTime = 1f;
-	float time = 0f;
+	//float lifeTime = 1f;
+	//float time = 0f;
 	public Button PushButton;
 
-	// Use this for initialization
-	
+	//Slack送信
 	public void PushOnClick(){
 		var message = "Push!";
 

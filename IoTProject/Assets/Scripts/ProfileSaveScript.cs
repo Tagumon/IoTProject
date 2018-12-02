@@ -13,8 +13,8 @@ public class ProfileSaveScript : MonoBehaviour {
 	public Text ProfileText;
 	public Text Console;
 	public int ProfileMemberNumber;
-	float lifeTime = 1f;
-	float time = 0f;
+	//float lifeTime = 1f;
+	//float time = 0f;
 
 	public GameObject ProfileEdit;
 

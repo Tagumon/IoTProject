@@ -10,7 +10,7 @@ public class ProfileCloseScript : MonoBehaviour {
 	public Text Profile;
 	public GameObject Information;
 	public GameObject ProfileInput;
-	public InputField EditInput;
+	//public InputField EditInput;
 	public GameObject ObjectControl;
 	ObjCtrl ObjCtrlScript;
 	void Start(){

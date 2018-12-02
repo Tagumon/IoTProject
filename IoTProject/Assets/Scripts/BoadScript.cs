@@ -21,8 +21,8 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 	public GameObject InputText;
 	public InputField SendText;
 	public Text Console;
-	float lifeTime = 1f;
-	float time = 0f;
+	//float lifeTime = 1f;
+	//float time = 0f;
 	public Button CloseButton;
 	private NCMBObject obj;
 	ObjCtrl ObjCtrlscript;
@@ -30,7 +30,9 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 
 	// Use this for initialization
 	void Start () {
-		CloseButton.onClick.AddListener(CloseOnClick);	
+		//Closeボタン有効化
+		CloseButton.onClick.AddListener(CloseOnClick);
+		//Lab情報取得(回転停止のため)	
 		ObjCtrlscript = ObjectControl.GetComponent<ObjCtrl>();
 	}
 	
@@ -38,6 +40,7 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 	void Update () {
 	}
 
+	//ボードクリック時ボード表示、回転固定
 	public void OnPointerClick(PointerEventData pointerData){
 		BoardDataUpdate();
 		Board.SetActive(true);
@@ -49,21 +52,18 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 
 	
 	void BoardDataUpdate(){
-		//if (SceneManager.GetActiveScene().name == "GameScene" || SceneManager.GetActiveScene().name == "Tutorial") {
-    		if ((float)Screen.height / (float)Screen.width >= 2) {
-				// 2:1
-				Debug.Log((float)Screen.height / (float)Screen.width);
-				Board.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 2000);
-				//GameObject.Find("UI").GetComponent<RectTransform>().offsetMin = new Vector2 (0, 90);
-				//GameObject.Find("UI").GetComponent<RectTransform>().offsetMax = new Vector2 (0, -120);
-			} else {
-				// 16:9
-				Debug.Log((float)Screen.height / (float)Screen.width);
-				Board.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 1800);
-				//Board.GetComponent<RectTransform>().offsetMax = new Vector2 (450, 200);
-			}
-		//}
-
+		//解像度変更
+		if ((float)Screen.height / (float)Screen.width >= 2) {
+			// 2:1
+			Debug.Log((float)Screen.height / (float)Screen.width);
+			Board.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 2000);
+		} else {
+			// 16:9
+			Debug.Log((float)Screen.height / (float)Screen.width);
+			Board.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 1800);
+		}
+		
+		//情報取得
 		NCMBQuery<NCMBObject> _query;
 		_query = new NCMBQuery<NCMBObject>("LabBoard");
 		_query.OrderByDescending("createDate");
@@ -113,6 +113,8 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 		});
 
 	}
+
+	//入力情報送信(Sendボタンに紐づけ)
 	public void SendTextData(){
 		NCMBObject obj = new NCMBObject ("LabBoard");
 			obj.Add ("Text", SendText.text);
@@ -134,6 +136,8 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 		}
 		Invoke("BoardDataUpdate", 1f);
 	}
+
+	//プロフィールボード非表示
 	public void CloseOnClick(){
 		/* TimeText.text = "";
 		ContentText.text = "";*/
@@ -149,9 +153,13 @@ public class BoadScript : MonoBehaviour, IPointerClickHandler {
 		EditBt.SetActive(false);
 		ObjCtrlscript.RotateControl = true;
 	}
+
+	//入力表示
 	public void InputFieldOpen(){
 		InputText.SetActive(true);
 	}
+
+	//入力非表示
 	public void InputFieldClose(){
 		InputText.SetActive(false);
 	}

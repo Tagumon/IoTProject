@@ -13,16 +13,16 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 	public Text Grade;
 	public Text Profile;
 	public Text Console;
-	float lifeTime = 1f;
-	float time = 0f;
+	//float lifeTime = 1f;
+	//float time = 0f;
 	public Canvas canvas;
-	public Button CloseButton;
 	ProfileSaveScript script;
 	ObjCtrl ObjCtrlscript;
 	public InputField EditInput;
 
 	// Use this for initialization
 	void Start () {
+		//Lab情報取得(回転停止のため)
 		ObjCtrlscript = ObjectControl.GetComponent<ObjCtrl>();
 
 	}
@@ -31,13 +31,14 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 	void Update () {
 	
 	}
-
+	//メンバークリック時プロフィール表示
 	public void OnPointerClick(PointerEventData pointerData){
 		//Debug.Log("OK");
 		Transform PB;
 		Transform VPort;
 		//Transform CT;
 		Transform IF;
+		//MenberNumber割当(ProfileSaveScriptのSend時に使用)
 		foreach (Transform child in canvas.transform){
 			if(child.name == "ProfileBoad"){
 				PB = child;
@@ -74,17 +75,18 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 				Console.text = "Error!";
 			}else{
 				//成功処理
+				//プロフィールテキスト反映
 				Console.text = "ReceptionSucceed!";
 				foreach(NCMBObject v in objList){
 					string MNumber;
-					string MName;
-					string MGrade;
-					string MProfile;
 					MNumber = v["MemberNumber"].ToString();
-					MName = v["Name"].ToString();
-					MGrade = v["Grade"].ToString();
-					MProfile = v["Profile"].ToString();
 					if(MNumber == MemberNumber.ToString()){
+						string MName;
+						string MGrade;
+						string MProfile;
+						MName = v["Name"].ToString();
+						MGrade = v["Grade"].ToString();
+						MProfile = v["Profile"].ToString();
 						Name.text = "Name:    " + MName;
 						Grade.text = "Grade:   " + MGrade;
 						Profile.text = MProfile;
@@ -96,8 +98,10 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 				Console.text = "WriteSucced!";
 			}
 		});
+		//プロフィールボード表示
 		Information.SetActive(true);
 
+		//解像度変更
     	if ((float)Screen.height / (float)Screen.width >= 2) {
 			// 2:1
 			Debug.Log((float)Screen.height / (float)Screen.width);
@@ -108,6 +112,7 @@ public class MemberClickedScript : MonoBehaviour, IPointerClickHandler {
 			Information.GetComponent<RectTransform>().sizeDelta = new Vector2 (900, 1800);
 		}
 		
+		//回転固定
 		ObjCtrlscript.RotateControl = false;
 		Debug.Log(gameObject.name + " がクリックされた!");
 	}
