@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "677192312465",
+    "firebase_url": "https://iotproject-35f81.firebaseio.com",
+    "project_id": "iotproject-35f81",
+    "storage_bucket": "iotproject-35f81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677192312465:android:5e8df74f7fd6517b",
+        "android_client_info": {
+          "package_name": "unity.asakalab.iotproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677192312465-gc5t9g6bph8vo2d6dit9i77t7punlak3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuHHAxF8jDHRUbJfYXwvN7Vtkon9Zucdk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

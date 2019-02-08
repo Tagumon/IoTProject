@@ -93,19 +93,21 @@
      <Compile Include="Assets\NCMB\Script\Task\NCMBScriptTaskExtension.cs" />
      <Compile Include="Assets\NCMB\Script\Task\NCMBUserTaskExtension.cs" />
      <Compile Include="Assets\NCMB\Script\Task\NCMBUserTaskMethods.cs" />
-     <Compile Include="Assets\Scripts\AspectSettingScript.cs" />
-     <Compile Include="Assets\Scripts\BoadScript.cs" />
-     <Compile Include="Assets\Scripts\MemberClickedScript.cs" />
-     <Compile Include="Assets\Scripts\MemberDataManager.cs" />
-     <Compile Include="Assets\Scripts\ObjCtrl.cs" />
-     <Compile Include="Assets\Scripts\PlayerScript.cs" />
-     <Compile Include="Assets\Scripts\ProfileCloseScript.cs" />
-     <Compile Include="Assets\Scripts\ProfileEditScript.cs" />
-     <Compile Include="Assets\Scripts\ProfileSaveScript.cs" />
-     <Compile Include="Assets\Scripts\PushMicrobotPushScript.cs" />
-     <Compile Include="Assets\Scripts\ResetButtonScript.cs" />
-     <Compile Include="Assets\Scripts\SlackAPI.cs" />
-     <Compile Include="Assets\Scripts\VariableManager.cs" />
+     <Compile Include="Assets\Scripts\LoginDataScript.cs" />
+     <Compile Include="Assets\Scripts\Main\BoadScript.cs" />
+     <Compile Include="Assets\Scripts\Main\LogoutScript.cs" />
+     <Compile Include="Assets\Scripts\Main\MemberClickedScript.cs" />
+     <Compile Include="Assets\Scripts\Main\ObjCtrl.cs" />
+     <Compile Include="Assets\Scripts\Main\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\Main\ProfileCloseScript.cs" />
+     <Compile Include="Assets\Scripts\Main\ProfileEditScript.cs" />
+     <Compile Include="Assets\Scripts\Main\ProfileSaveScript.cs" />
+     <Compile Include="Assets\Scripts\Main\PushMicrobotPushScript.cs" />
+     <Compile Include="Assets\Scripts\Main\PushObject.cs" />
+     <Compile Include="Assets\Scripts\Main\ResetButtonScript.cs" />
+     <Compile Include="Assets\Scripts\Main\SlackAPI.cs" />
+     <Compile Include="Assets\Scripts\Main\VariableManager.cs" />
+     <Compile Include="Assets\Scripts\Start\LoginScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/Unity Project/IoTProject/IoTProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

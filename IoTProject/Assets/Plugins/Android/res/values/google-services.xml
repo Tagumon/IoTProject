@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://iotproject-35f81.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">677192312465</string>
+  <string name="google_storage_bucket" translatable="false">iotproject-35f81.appspot.com</string>
+  <string name="project_id" translatable="false">iotproject-35f81</string>
+  <string name="google_api_key" translatable="false">AIzaSyDuHHAxF8jDHRUbJfYXwvN7Vtkon9Zucdk</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDuHHAxF8jDHRUbJfYXwvN7Vtkon9Zucdk</string>
+  <string name="google_app_id" translatable="false">1:677192312465:android:5e8df74f7fd6517b</string>
+  <string name="default_web_client_id" translatable="false">677192312465-gc5t9g6bph8vo2d6dit9i77t7punlak3.apps.googleusercontent.com</string>
+</resources>
